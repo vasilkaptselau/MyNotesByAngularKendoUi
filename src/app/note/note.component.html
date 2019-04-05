@@ -1,0 +1,10 @@
+<div @notesWrapper>
+  <h1><i class="fas fa-feather-alt"></i>My Notes</h1>
+  <input kendoTextBox #itemInput (keyup.enter)="addNote(itemInput)" placeholder="What is your focus today?" />
+
+  <div *ngIf="notes" class="list-group" cdkDropList (cdkDropListDropped)="reorderList($event)">
+    <button kendoButton type="button" class="note" @noteItem cdkDrag *ngFor="let note of notes; index as i">
+      <span (click)="removeNote(note, i)">{{note}}</span>
+    </button>
+  </div>
+</div>

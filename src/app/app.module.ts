@@ -1,5 +1,5 @@
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { TodoComponent } from './todo/todo.component';
+import { NoteComponent } from './note/note.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -13,7 +13,7 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 @NgModule({
   declarations: [
     AppComponent,
-    TodoComponent,
+    NoteComponent,
   ],
   imports: [
     BrowserModule,

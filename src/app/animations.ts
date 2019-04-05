@@ -1,8 +1,4 @@
-import { animate, keyframes, style, animation } from "@angular/animations";
-
-// I've created this animations file to keep our reusable triggers in, 
-// if you have a ton of animations, 
-// you might want to create a folder and organize them by file
+import { animate, keyframes, style, animation } from '@angular/animations';
 
 
 export let slideInAnimation = animation([
@@ -38,4 +34,4 @@ export let slideOutAnimation = animation([
       height: 0
     }),
   ]))
-]);
+])

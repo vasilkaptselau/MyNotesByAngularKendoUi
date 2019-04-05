@@ -1,9 +1,19 @@
 h1 {
   margin: 0;
-  text-transform: uppercase;
+  text-align: center;
+  font-style: italic;
+  color: azure;
 }
 
-input, .todo {
+.fa-feather-alt {
+  margin-right: 10px;
+  background-image: linear-gradient(to top, #0c3483 0%, #a2b6df 20%, #6b8cce 10%, #a2b6df 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+input,
+.note {
   padding: 0;
   width: 100%;
   display: block;
@@ -17,7 +27,7 @@ input {
   height: 50px;
 }
 
-button.todo {
+button.note {
   height: 50px;
   background-image: none;
   border: none;
@@ -34,9 +44,9 @@ button.todo {
 
   &:hover {
     outline: 1px solid rgba(176, 59, 16, 0.75);
-    box-shadow: 
-      0 1px 0 rgba(255,255,255,0.25) inset, 
-      0 0 10px rgba(0,0,0,0.25);
+    box-shadow:
+      0 1px 0 rgba(255, 255, 255, 0.25) inset,
+      0 0 10px rgba(0, 0, 0, 0.25);
     z-index: 100;
   }
 
@@ -45,14 +55,15 @@ button.todo {
   }
 }
 
-$todos: 45;
-@for $i from 1 through $todos {
-  .todo:nth-last-child(#{$i}n) {
-    background-color: hsl((360deg / $todos * $i), 75%, 75%);
+$notes: 50;
+
+@for $i from 1 through $notes {
+  .note:nth-last-child(#{$i}n) {
+    background-color: hsl(((110deg) * $notes * $i), 100%, 42%);
   }
 }
 
-/* Animate items as they're being sorted. */
+
 .cdk-drop-list-dragging .cdk-drag {
   transition: transform .5s cubic-bezier(0.88, -0.19, 0.26, 1.27);
 }
