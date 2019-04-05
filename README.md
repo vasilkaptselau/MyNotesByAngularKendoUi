@@ -1,4 +1,4 @@
-# Todo App using Kendo UI + Angular Material CDK
+# MyNotes App using Kendo UI + Angular Material CDK
 
 
 
